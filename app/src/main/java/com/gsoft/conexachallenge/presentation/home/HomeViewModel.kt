@@ -31,7 +31,7 @@ class HomeViewModel @Inject constructor(
         getProducts()
     }
 
-    private fun getProducts() {
+    fun getProducts() {
         viewModelScope.launch {
             setLoadingState()
             if (! networkUtils.isNetworkConnected()){
